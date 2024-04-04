@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-04-04T11:17:23-03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DVRBS</title><subtitle>software developer looking for something to write about</subtitle><entry><title type="html">What is yoda conditioning?</title><link href="http://localhost:4000/code/typos/conditioning/2024/04/01/What-Is-Yoda-Conditioning.html" rel="alternate" type="text/html" title="What is yoda conditioning?" /><published>2024-04-01T10:46:43-03:00</published><updated>2024-04-01T10:46:43-03:00</updated><id>http://localhost:4000/code/typos/conditioning/2024/04/01/What-Is-Yoda-Conditioning</id><content type="html" xml:base="http://localhost:4000/code/typos/conditioning/2024/04/01/What-Is-Yoda-Conditioning.html"><![CDATA[<blockquote>
+  <p>“Control, control, you must learn control!” – Master Yoda</p>
+</blockquote>
+
+<p>In “Star Wars: Episode V - The Empire Strikes Back,” Master Yoda imparts this wisdom to Luke Skywalker during his training on Dagobah, underscoring the significance of mastering one’s emotions and maintaining control, particularly in the utilization of the Force. This counsel, applicable not only to Force wielders, proves highly beneficial for programmers and their code.</p>
+
+<p>Drawing inspiration from the iconic communication style of the fictional character, Yoda conditioning represents a programming approach dedicated to rectifying minor and inconvenient issues in everyday programming practices, such as typos. Let us witness it in action within real code. Can you identify the error in less than five seconds?</p>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp">
+</span>
+<span class="k">enum</span> <span class="n">PetType</span><span class="p">{</span>
+  <span class="n">DOG</span><span class="p">,</span>
+  <span class="n">CAT</span><span class="p">,</span>
+  <span class="n">BIRD</span><span class="p">,</span>
+  <span class="n">REPTILE</span>
+<span class="p">};</span>
+
+<span class="k">struct</span> <span class="nc">PetInfo</span><span class="p">{</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">name</span><span class="p">;</span>
+  <span class="kt">float</span> <span class="n">hunger</span><span class="p">;</span>
+  <span class="kt">float</span> <span class="n">thirst</span><span class="p">;</span>
+  <span class="n">PetType</span> <span class="n">type</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="kt">bool</span> <span class="nf">PetIsHungry</span><span class="p">(</span><span class="n">PetInfo</span> <span class="n">info</span><span class="p">){</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">info</span><span class="p">.</span><span class="n">hunger</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>	
+  <span class="n">PetInfo</span> <span class="n">petInfo</span><span class="p">;</span>
+  <span class="n">petInfo</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="s">"Puppy"</span><span class="p">;</span>
+  <span class="n">petInfo</span><span class="p">.</span><span class="n">hunger</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="n">petInfo</span><span class="p">.</span><span class="n">thirst</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="n">petInfo</span><span class="p">.</span><span class="n">type</span> <span class="o">=</span> <span class="n">PetType</span><span class="o">::</span><span class="n">DOG</span><span class="p">;</span>
+	
+  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span><span class="s">"Pet is hungry? : "</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">boolalpha</span> <span class="o">&lt;&lt;</span> <span class="n">PetIsHungry</span><span class="p">(</span><span class="n">petInfo</span><span class="p">)</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Did you spot it? I presume you did. Nevertheless, just to ensure, here it is:</p>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="kt">bool</span> <span class="nf">PetIsHungry</span><span class="p">(</span><span class="n">PetInfo</span> <span class="n">info</span><span class="p">){</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">info</span><span class="p">.</span><span class="n">hunger</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>As we have all likely experienced at some juncture, a typo within a conditional has been made. In this instance, the omission of the “&gt;” symbol is evident. This oversight results in the program failing to execute a comparison, instead executing a true conditional, where we enter the conditional block with the hunger value now assigned as 0.5. While this is a minor and easily remedied issue, it may go unnoticed during compile time, necessitating manual inspection of the code for correction. While this example may seem straightforward, within larger projects involving teams, such typos can swiftly become problematic. So, how can this be mitigated? Enter Yoda conditional.</p>
+
+<p>This approach posits that, as compile-time constants cannot be assigned values, structuring conditionals to check if constants are identical or adhere to a pattern with variables reduces the likelihood of a program compiling with such errors in the binary. Let’s revisit the above example:</p>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="kt">bool</span> <span class="nf">PetIsHungry</span><span class="p">(</span><span class="n">PetInfo</span> <span class="n">info</span><span class="p">){</span>
+  <span class="k">if</span> <span class="p">(</span><span class="mf">0.5</span> <span class="o">=</span> <span class="n">info</span><span class="p">.</span><span class="n">hunger</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Now, the compiler will prohibit compilation, indicating that the assignment of values must adhere to the operand left-to-right notation, i.e., Variable operand value. While this solution works, when should it be employed? This question arises because, as you may have observed, this style lacks readability and may impede collaborative efforts within a team, akin to Luke Skywalker’s struggles in mastering the ways of the Force with his mentor.</p>
+
+<p>In my estimation, it is prudent to utilize this notation as a tool for prototyping and testing software during the draft stages of production code. Yoda conditioning should never be deployed in production unless unanimously agreed upon by all team members. Once the software has undergone thorough testing and scrutiny, the final version should be rendered without this style, employing conventional conditioning instead.</p>]]></content><author><name></name></author><category term="code" /><category term="typos" /><category term="conditioning" /><summary type="html"><![CDATA[“Control, control, you must learn control!” – Master Yoda]]></summary></entry><entry><title type="html">I like clean code</title><link href="http://localhost:4000/opinion/tech/2024/03/26/I-like-clean-code.html" rel="alternate" type="text/html" title="I like clean code" /><published>2024-03-26T21:07:45-03:00</published><updated>2024-03-26T21:07:45-03:00</updated><id>http://localhost:4000/opinion/tech/2024/03/26/I-like-clean-code</id><content type="html" xml:base="http://localhost:4000/opinion/tech/2024/03/26/I-like-clean-code.html"><![CDATA[<p>I find myself drawn to “Clean Code” with an almost magnetic pull. There’s an undeniable charm in the author, Robert C. Martin’s, candid and conversational tone, as if he’s sitting across from you, dissecting your programming woes with surgical precision. Martin effortlessly weaves personal anecdotes and subtle humor throughout the book, turning what could be a dry subject into an engaging narrative.</p>
+
+<p>Take, for instance, the opening chapter, where Martin presents a thought-provoking image urging readers to compare two doors: one representing the pristine elegance of clean code, and the other, a chaotic jumble reminiscent of past coding misadventures. It’s a clever introduction that sets the stage for the journey ahead, inviting readers to reflect on their own coding practices.</p>
+
+<p><img src="/assets/images/posts/code_review.png" alt="Cover image for the chapter &quot;Introduction&quot; from book Clean code" /></p>
+
+<p>Beyond its witty prose, “Clean Code” delights in playful illustrations adorning each chapter cover. These whimsical images serve as visual cues, offering a lighthearted preview of the content to come. Personally, I couldn’t help but chuckle at the chapter dedicated to code formatting, aptly depicted by a band of “drunk sailors” grappling with unruly syntax. Who among us hasn’t encountered a file littered with questionable coding decisions?</p>
+
+<p><img src="/assets/images/posts/formatting.png" alt="Cover image for the chapter &quot;Formatting&quot; from book Clean code" /></p>
+
+<p>Indeed, “Clean Code” holds a special place in my library, providing both entertainment and enlightenment in equal measure. But beyond its entertainment value, does it deliver on its promise to elevate one’s coding prowess?</p>
+
+<p>In short, yes.</p>
+
+<p>Martin’s masterpiece transcends its status as a mere tech tome, emerging as a cornerstone of programming wisdom. It’s a literary time capsule, preserving invaluable insights into the art of software development for generations to come. “Clean Code” served as my gateway to the diverse realms of programming paradigms, from functional and procedural programming to the nuances of object-oriented design.</p>
+
+<p>But what about the practical takeaways? For those seeking actionable advice, “Clean Code” offers a treasure trove of principles to guide your coding endeavors:</p>
+
+<ul>
+  <li>Treat source code like poetry, meticulously crafted with care.</li>
+  <li>Embrace descriptive and precise variable and function names.</li>
+  <li>Approach comments with skepticism, relying instead on rigorous testing and version control.</li>
+  <li>Embrace test-driven development as a safeguard against project pitfalls.</li>
+  <li>Refrain from publishing unfinished code, striving for narrative coherence akin to a well-structured story.</li>
+  <li>Establish and adhere to design patterns when collaborating with a team.</li>
+</ul>
+
+<p>Yet, for all its merits, “Clean Code” is not without its detractors. Martin’s stringent stance on function flags, advocating for a maximum of three, may raise eyebrows among some readers. Likewise, his assertion that code documentation should play second fiddle to the code itself may elicit dissent, particularly in environments where clarity and accessibility are paramount.</p>
+
+<p>In conclusion, “Clean Code” is a literary gem that shines brightly amidst the vast expanse of technical literature. While it may not be flawless, its blend of wit, wisdom, and practical advice ensures its enduring relevance in the ever-evolving landscape of software engineering. So, whether you’re seeking enlightenment or simply a good laugh, “Clean Code” promises a journey well worth embarking upon.</p>]]></content><author><name></name></author><category term="opinion" /><category term="tech" /><summary type="html"><![CDATA[I find myself drawn to “Clean Code” with an almost magnetic pull. There’s an undeniable charm in the author, Robert C. Martin’s, candid and conversational tone, as if he’s sitting across from you, dissecting your programming woes with surgical precision. Martin effortlessly weaves personal anecdotes and subtle humor throughout the book, turning what could be a dry subject into an engaging narrative.]]></summary></entry><entry><title type="html">Dvorak will make you a better typist</title><link href="http://localhost:4000/2024/03/26/Dvorak-will-make-you-a-better-typist.html" rel="alternate" type="text/html" title="Dvorak will make you a better typist" /><published>2024-03-26T00:30:53-03:00</published><updated>2024-03-26T00:30:53-03:00</updated><id>http://localhost:4000/2024/03/26/Dvorak-will-make-you-a-better-typist</id><content type="html" xml:base="http://localhost:4000/2024/03/26/Dvorak-will-make-you-a-better-typist.html"><![CDATA[<p>Ah, the perpetual struggle of a slow typist – a title I’ve begrudgingly worn for much of my life. With a modest typing speed barely scratching 50 Words Per Minute (WPM), I’ve affectionately dubbed myself a “chicken typer” – a whimsical term encapsulating my haphazard and lethargic typing style.</p>
+
+<p>In my quest for improvement, I embarked on the journey of touch typing, armed with the ubiquitous QWERTY layout. I explored an array of online tools – MonkeyType, ztype, typing fighters, to name a few – in a valiant attempt to refine my skills. Yet, despite my earnest endeavors, progress remained elusive. Even worse, prolonged periods of inactivity often saw my typing abilities regress, leaving me more frustrated than before.</p>
+
+<p>In a moment of introspection, I pondered the influence of my choice of keyboard on my typing woes. Could a departure from the standard layout usher in a newfound era of proficiency? Thus, I ventured into the realm of compact keyboards, opting for a Redragon 60% keyboard sans the luxury of arrow keys. Sacrificing convenience for portability and precision, I bid farewell to the familiarity of full-size membrane keyboards or the distinct click of Cherry MX Blue switches.</p>
+
+<p>To my surprise, the Redragon keyboard proved to be a revelation, offering unparalleled comfort and functionality. It served as an ideal entry point for casual gaming and programming alike, boasting a blend of efficiency and compactness. However, despite the allure of this new hardware, my typing skills remained stubbornly stagnant, if not regressing, in the initial stages of adaptation.</p>
+
+<p>Frustrated by my lack of progress, I flirted with the idea of reverting to my trusty laptop keyboard – a sanctuary of familiarity in a sea of uncertainty. Yet, it was during this period of contemplation that fate intervened in the form of the DVORAK keyboard layout.</p>
+
+<p>Unlike its predecessors, DVORAK presented a unique challenge. The initial foray into this unfamiliar territory was marred by abysmal typing speeds – barely cresting 10 WPM on platforms like MonkeyType. Precision became a daunting hurdle, with my accuracy plummeting to a mere 40 to 50% on a layout map. Yet, undeterred by these setbacks, I resolved to persevere.</p>
+
+<p>As weeks turned into months, I immersed myself in the DVORAK layout, embracing its quirks and idiosyncrasies. From workstations to smartphones, I integrated DVORAK into every facet of my typing routine. Slowly but surely, progress emerged from the ashes of frustration, with my WPM soaring to unprecedented heights within a scant three months.</p>
+
+<p>Today, after over five months of unwavering dedication, I stand as a testament to the transformative power of the DVORAK layout. But what sets DVORAK apart from its predecessors?</p>
+
+<p>For me, the answer lies in its departure from convention. Unlike the familiar confines of QWERTY, DVORAK challenged my reliance on visual cues, fostering a deeper understanding of typing mechanics.</p>
+
+<p>In conclusion, my transition to the DVORAK layout has been nothing short of revolutionary, and I harbor no intentions of returning to QWERTY any time soon.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[Ah, the perpetual struggle of a slow typist – a title I’ve begrudgingly worn for much of my life. With a modest typing speed barely scratching 50 Words Per Minute (WPM), I’ve affectionately dubbed myself a “chicken typer” – a whimsical term encapsulating my haphazard and lethargic typing style.]]></summary></entry></feed>
