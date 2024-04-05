@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Writing org as source code | DVRBS</title>
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="Writing org as source code" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="For most of my projects and work as a programmer I was that guy that would write the source code following the same structure as I was tought in college, documentation accompanied by the source code itself. Sure, it made the project much bigger than it needed to be, and many times what was written was outdated or outwrite wrong. But for most of our college years, that documentation saved us." />
+<meta property="og:description" content="For most of my projects and work as a programmer I was that guy that would write the source code following the same structure as I was tought in college, documentation accompanied by the source code itself. Sure, it made the project much bigger than it needed to be, and many times what was written was outdated or outwrite wrong. But for most of our college years, that documentation saved us." />
+<link rel="canonical" href="http://localhost:4000/org/emacs/source/code/2024/04/04/Writing-org-as-source-code.html" />
+<meta property="og:url" content="http://localhost:4000/org/emacs/source/code/2024/04/04/Writing-org-as-source-code.html" />
+<meta property="og:site_name" content="DVRBS" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-04-04T21:00:00-03:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Writing org as source code" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-04-04T21:00:00-03:00","datePublished":"2024-04-04T21:00:00-03:00","description":"For most of my projects and work as a programmer I was that guy that would write the source code following the same structure as I was tought in college, documentation accompanied by the source code itself. Sure, it made the project much bigger than it needed to be, and many times what was written was outdated or outwrite wrong. But for most of our college years, that documentation saved us.","headline":"Writing org as source code","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/org/emacs/source/code/2024/04/04/Writing-org-as-source-code.html"},"url":"http://localhost:4000/org/emacs/source/code/2024/04/04/Writing-org-as-source-code.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="DVRBS" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">DVRBS</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/archive/">Archive</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Writing org as source code</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2024-04-04T21:00:00-03:00" itemprop="datePublished">Apr 4, 2024
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>For most of my projects and work as a programmer I was that guy that would write the source code following the same structure as I was tought in college, 
+documentation accompanied by the source code itself. Sure, it made the project much bigger than it needed to be, and many times what was written was outdated or outwrite wrong.
+But for most of our college years, that documentation saved us.</p>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="k">class</span> <span class="nc">Model</span>
+<span class="p">{</span>
+  <span class="cm">/*Read data from OBJ file*/</span>
+  <span class="kt">void</span> <span class="n">ReadModel</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">file_name</span><span class="p">);</span>
+  <span class="cm">/*Read MTl file from OBJ file*/</span>
+  <span class="kt">void</span> <span class="n">ReadMaterial</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">file_name</span><span class="p">);</span>
+  <span class="cm">/*Send data read from OBJ file to Graphics Card*/</span>
+  <span class="kt">void</span> <span class="n">SendModelData</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+  <span class="kt">void</span> <span class="n">LoadTexture</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">file_name</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<p align="center">
+<sup><sup>Example source code from OpenGL project from college</sup></sup>
+</p>
+
+<p>Now, what if we could improve this coding style, not only making it better looking, but also better to read and smaller files overall?
+And what if we could use our language of choice and keep using our favorite stack? And as icing on top keep all our projects available on the cloud so all our team members can see?
+That my friend is no myth, is <strong>org-mode</strong> + <strong>org files</strong> + <strong>emacs</strong>.</p>
+
+<h1 id="project-structure">Project structure</h1>
+
+<p>For this example project, we will be making a small cli calculator for addition, subtraction, division and multiplication between only two numbres.
+As the plan is to make it cross platform, I’ll be using CMake and C++, but all languages for any programming stack apply to this method, up to what I know. So feel free to use and test what
+you like and let me know how it was.</p>
+
+<p>For this project, the structure will be as follows:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">org-math/
+├── bin
+├── CMakeLists.org
+└── src
+    ├── main.org
+    └── math.org</code></pre></figure>
+
+<p>As we can see we replaced all of our file extensions from all of our files and used only org for this, from which we will take advantage of it to use emacs and org-mode. 
+Let us begin with the source part, shall we?</p>
+
+<h1 id="header-files">Header files</h1>
+
+<p>As most C++ projects found in nature, in here we will start by working on the header files of the project to make our math cli tool.
+For this, in my math.org file I will start by including the important metadata for this file.</p>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="cp">#+TITLE: math.h
+#+AUTHOR: dvrbs
+#+DATE: 2024-04-01
+</span>
+<span class="cp">#+OPTIONS: num:nil toc:nil timestamp:nil
+</span>
+<span class="cp">#+PROPERTY: header-args :tangle math.h</span></code></pre></figure>
+
+<p>In here, we can already have an idea of what this file is and what it will become in the future.
+For a better idea, let us look at the options section.
+In it, we can see we made some alteration to the export options of the file, where, to take advantage of the tools for exporting our files to the web, and make it readable,
+we removed the number listing of the topics of the files, the table of contents at the begining of the files and the timestamp information. With this, we ensure our source code
+is readable in most devices and allows for a more minimalistic look to it.</p>
+
+<p>Next comes the methods we will use for our CLI tool.
+To take advantage of org-modes syntax highlighting capabilities, let us add all of our methods to code blocks indicating that it is C++ code. It should look something like this.</p>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="p">...</span>
+
+<span class="cp">#+begin_src C++
+</span>  <span class="kt">int</span> <span class="nf">Add</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="cp">#+end_src
+</span>
+<span class="cp">#+begin_src C++
+</span>  <span class="kt">int</span> <span class="nf">Sub</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="cp">#+end_src
+</span>
+<span class="cp">#+begin_src C++
+</span>  <span class="kt">int</span> <span class="nf">Mul</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="cp">#+end_src
+</span>
+<span class="cp">#+begin_src C++
+</span>  <span class="kt">int</span> <span class="nf">Div</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="cp">#+end_src</span></code></pre></figure>
+
+<p>As we can see, all of the Functions are nice and ready to be called, but it is missing something. The documentation.
+Before org, our documentation lived inside of our source code, cluthering our project and sometimes, not even doing nothing usefull, 
+like commenting old code or some TODO topic that will never be done.</p>
+
+<p>For us to add the documentation to the functions, my style is to have the title of the function accompanied by its parameters and than a description of what it does.
+In the end we will have something like this.</p>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="p">...</span>
+
+<span class="o">*</span> <span class="n">Add</span>
+<span class="o">**</span> <span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span>
+<span class="n">Takes</span> <span class="n">two</span> <span class="n">integers</span> <span class="n">and</span> <span class="n">returns</span> <span class="n">their</span> <span class="n">sum</span>
+
+<span class="cp">#+begin_src C++
+</span>  <span class="kt">int</span> <span class="nf">Add</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="cp">#+end_src
+</span>
+<span class="o">*</span> <span class="n">Subtract</span>
+<span class="o">**</span> <span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span>
+<span class="n">Takes</span> <span class="n">two</span> <span class="n">integers</span> <span class="n">and</span> <span class="n">returns</span> <span class="n">their</span> <span class="n">subtraction</span>
+
+<span class="cp">#+begin_src C++
+</span>  <span class="kt">int</span> <span class="nf">Sub</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="cp">#+end_src
+</span>
+<span class="o">*</span> <span class="n">Multiplication</span>
+<span class="o">**</span> <span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span>
+<span class="n">Takes</span> <span class="n">two</span> <span class="n">integers</span> <span class="n">and</span> <span class="n">returns</span> <span class="n">their</span> <span class="n">multiplication</span>
+
+<span class="cp">#+begin_src C++
+</span>  <span class="kt">int</span> <span class="nf">Mul</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="cp">#+end_src
+</span>
+<span class="o">*</span> <span class="n">Division</span>
+<span class="o">**</span> <span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span>
+<span class="n">Takes</span> <span class="n">two</span> <span class="n">integers</span> <span class="n">and</span> <span class="n">returns</span> <span class="n">their</span> <span class="n">division</span>
+
+<span class="cp">#+begin_src C++
+</span>  <span class="kt">int</span> <span class="nf">Div</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="cp">#+end_src</span></code></pre></figure>
+
+<p>Now that we have the header file ready, let us take a look at the source cpp file.</p>
+
+<h1 id="source-files">Source files</h1>
+
+<p>Similar to the header files before, first we add the metadata again but now we have to change the tangle output file to main.cc. On main.org we will have something like this.</p>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="cp">#+TITLE: main.cc
+#+AUTHOR: dvrbs
+#+DATE: 2024-04-01
+</span>
+<span class="cp">#+OPTIONS: num:nil toc:nil timestamp:nil
+</span>
+<span class="cp">#+PROPERTY: header-args :tangle main.cc</span></code></pre></figure>
+
+<p>Next, we have to add the include files to main. For this, let us add another cpp code block, include the files and describe this part of the code as “Include package”</p>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="p">...</span>
+<span class="o">*</span> <span class="n">include</span> <span class="n">packages</span>
+
+<span class="cp">#+begin_src C++
+</span>  <span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span>  <span class="cp">#include</span> <span class="cpf">"math.h"</span><span class="cp">
+#+end_src</span></code></pre></figure>
+
+<p>And for a simple demonstration of the tool, we will add the final code block for the main function of the program. Once again we will describe the block but now as “main program”</p>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="p">...</span>
+<span class="o">*</span> <span class="n">main</span> <span class="n">program</span>
+
+<span class="cp">#+begin_src C++
+</span>  <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">Add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">Sub</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">Mul</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">Div</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="cp">#+end_src</span></code></pre></figure>
+
+<p>Will both source and header files ready, it is time for us to compile the program and test it in a console.</p>
+
+<h1 id="build">Build</h1>
+
+<p>As we are making a cross platform program, we will open the CMakeList.org file and paste this to it.</p>
+
+<figure class="highlight"><pre><code class="language-cmake" data-lang="cmake"><span class="c1">#+TITLE: CMakeLists.txt </span>
+<span class="c1">#+AUTHOR: dvrbs</span>
+<span class="c1">#+DATE: 2024-04-01</span>
+<span class="c1">#+OPTIONS: num:nil toc:nil timestamp:nil</span>
+<span class="c1">#+PROPERTY: header-args :tangle CMakeLists.txt</span>
+
+* Basic project configuration
+
+<span class="c1">#+begin_src cmake</span>
+  <span class="nb">cmake_minimum_required</span><span class="p">(</span>VERSION 3.29<span class="p">)</span>
+  <span class="nb">project</span><span class="p">(</span>org-math<span class="p">)</span>
+  <span class="nb">set</span><span class="p">(</span>CMAKE_CXX_STANDARD 17<span class="p">)</span>
+<span class="c1">#+end_src</span>
+
+* Source files and library configuration
+
+<span class="c1">#+begin_src cmake</span>
+  <span class="nb">set</span><span class="p">(</span>SOURCE_FILES src/main.cc<span class="p">)</span>
+<span class="c1">#+end_src</span>
+
+* Project source configuration
+
+<span class="c1">#+begin_src cmake</span>
+  <span class="nb">add_executable</span><span class="p">(</span>simple_example <span class="si">${</span><span class="nv">SOURCE_FILES</span><span class="si">}</span><span class="p">)</span>
+<span class="c1">#+end_src</span></code></pre></figure>
+
+<p>Next we have now to tangle all of the files we have created to their respective code files to be compiled.
+The easiest way to do this is as follows:</p>
+
+<ul>
+  <li>Open the file</li>
+  <li>At the beginning of the file, type the command C-c C-c</li>
+  <li>type the command M-x org-babel-tangle</li>
+</ul>
+
+<p>If all files were created, now we should have something like this:</p>
+
+<pre><code class="language-txt">org-math/
+├── bin
+├── CMakeLists.org
+├── CMakeLists.txt
+└── src
+    ├── main.cc
+    ├── main.org
+    ├── math.h
+    └── math.org
+</code></pre>
+
+<p>If we now check the newly generated files, we will see that they are all normal and simple code files like any other, but now are clean and have no documentation on them.
+To test if this work, let us compile it and run on our console.</p>
+
+<p>To compile a cmake project, firt in the root of our project in the console, we run the command:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>CMake <span class="nt">-S</span> <span class="nb">.</span> <span class="nt">-B</span> bin.
+</code></pre></div></div>
+
+<p>Next, we go to the bin directory and run the make command:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd </span>bin
+<span class="nv">$ </span>make
+</code></pre></div></div>
+
+<p>Now run the org-math project we created and we are finished. We have made a project with nothing but org files, org mode and got easy to read documentation that can be read
+as org files that will be fine, but we could also have it online on the cloud or on git repository services like gitlab and github.
+Below we have an example of org files rendered as html documentation.</p>
+
+<p><img src="/assets/images/posts/org-math-html.png" alt="My helpful screenshot" /></p>
+
+  </div><a class="u-url" href="/org/emacs/source/code/2024/04/04/Writing-org-as-source-code.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">DVRBS</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">DVRBS</li><li><a class="u-email" href="mailto:contact@dvrbs.com">contact@dvrbs.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/dvrbs"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">dvrbs</span></a></li><li><a href="https://www.twitter.com/dvrbs"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">dvrbs</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>software developer looking for something to write about</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
