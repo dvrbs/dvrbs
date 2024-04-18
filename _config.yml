@@ -19,13 +19,12 @@
 # in the templates via {{ site.myvariable }}.
 
 title: DVRBS
-email: contact@dvrbs.com
-description: >- # this means to ignore newlines until "baseurl:"
-  software developer looking for something to write about
+email: contato@dvrbs.org
+description: Software developer that blends his passion for tech with his hobby of writting.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: dvrbs
-github_username:  dvrbs
+twitter_username: dev_rubs
+gitlab_username: dvrbs
 
 # Build settings
 theme: minima
