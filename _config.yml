@@ -21,7 +21,7 @@
 title: DVRBS
 email: contato@dvrbs.org
 description: Software developer that blends his passion for tech with his hobby of writting.
-baseurl: "/dvrbs" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: dev_rubs
 gitlab_username: dvrbs
