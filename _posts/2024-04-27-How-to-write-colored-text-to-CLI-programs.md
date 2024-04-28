@@ -25,7 +25,7 @@ To activate this flag, it's a simple addition during compilation, as demonstrate
 g++ -fdiagnostics-color=always -o my_program my_program.cpp
 ```
 
-![Example output with the flag enabled](/assets/images/posts/color-text-gcc-example.png)
+![Example output with the flag enabled](/dvrbs/assets/images/posts/color-text-gcc-example.png)
 
 As straightforward as this fix may seem, it's not entirely optimal for
 my needs. While effective for individual developers, the game engine

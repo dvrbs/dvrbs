@@ -9,11 +9,11 @@ I find myself drawn to "Clean Code" with an almost magnetic pull. There's an und
 
 Take, for instance, the opening chapter, where Martin presents a thought-provoking image urging readers to compare two doors: one representing the pristine elegance of clean code, and the other, a chaotic jumble reminiscent of past coding misadventures. It's a clever introduction that sets the stage for the journey ahead, inviting readers to reflect on their own coding practices.
 
-![Cover image for the chapter "Introduction" from book Clean code](/assets/images/posts/code_review.png)
+![Cover image for the chapter "Introduction" from book Clean code](/dvrbs/assets/images/posts/code_review.png)
 
 Beyond its witty prose, "Clean Code" delights in playful illustrations adorning each chapter cover. These whimsical images serve as visual cues, offering a lighthearted preview of the content to come. Personally, I couldn't help but chuckle at the chapter dedicated to code formatting, aptly depicted by a band of "drunk sailors" grappling with unruly syntax. Who among us hasn't encountered a file littered with questionable coding decisions?
 
-![Cover image for the chapter "Formatting" from book Clean code](/assets/images/posts/formatting.png)
+![Cover image for the chapter "Formatting" from book Clean code](/dvrbs/assets/images/posts/formatting.png)
 
 Indeed, "Clean Code" holds a special place in my library, providing both entertainment and enlightenment in equal measure. But beyond its entertainment value, does it deliver on its promise to elevate one's coding prowess?
 
